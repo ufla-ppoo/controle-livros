@@ -57,7 +57,7 @@ public class TelaMeusLivros {
     private JTextArea taDescricao;
 
      /**
-     * Constrói a tela de autenticação guardando a referência da tela principal
+     * Constrói a tela Meus Livros guardando a referência da tela principal
      * e criando o gerenciador de usuários.
      * 
      * @param telaPrincipal Referência da tela principal.

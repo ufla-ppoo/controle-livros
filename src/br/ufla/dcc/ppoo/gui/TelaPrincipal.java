@@ -176,7 +176,7 @@ public class TelaPrincipal {
     }
 
     /**
-     * Constrói o menu Idioma, trata interncionalização.
+     * Constrói o menu Idioma, trata internacionalização.
      */
     private void construirMenuIdioma() {
         menuIdioma = new JMenu(I18N.obterMenuIdioma());
@@ -189,7 +189,7 @@ public class TelaPrincipal {
     }
 
     /**
-     * Constrói o menu Ajuda, trata interncionalização.
+     * Constrói o menu Ajuda, trata internacionalização.
      */
     private void construirMenuAjuda() {
         menuAjuda = new JMenu(I18N.obterMenuAjuda());
@@ -200,11 +200,18 @@ public class TelaPrincipal {
     }
 
     /**
-     * Constrói o menu Usuário, trata interncionalização.
+     * Constrói o menu Usuário, trata internacionalização.
      */
     private void construirMenuUsuario() {
         menuPrincipal = new JMenuBar();
         construirMenuInicio();
+        
+        if (sessaoUsuario.estahLogado()) {
+             // Aqui você poderá adicionar outros menus adequados
+             // ao seu projeto que serão exibidos quando o
+             // usuário estiver logado no sistema.
+         }        
+        
         construirMenuIdioma();
         construirMenuAjuda();
         janela.setJMenuBar(menuPrincipal);

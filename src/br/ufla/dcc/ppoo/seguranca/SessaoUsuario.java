@@ -1,6 +1,8 @@
 package br.ufla.dcc.ppoo.seguranca;
 
+import br.ufla.dcc.ppoo.i18n.I18N;
 import br.ufla.dcc.ppoo.modelo.Usuario;
+import java.util.Arrays;
 
 /**
  * Classe responsável por controlar a sessão (autenticação) do usuário no sistema
@@ -49,12 +51,19 @@ public class SessaoUsuario {
     } 
    
     /**
-     * Altera o usuário atualmente logado
+     * Altera o usuário atualmente logado, verificando sua senha.
      * 
      * @param usuario Novo usuário logado.
+     * @throws Exception Exceção gerada caso o usuário não possa ser autenticado,
+     * ou seja, usuário não existe ou senha incorreta.
      */
-    public void alterarUsuario(Usuario usuario) {
-        this.usuario = usuario;
+    public void alterarUsuario(Usuario usuario, char[] senha) throws Exception {        
+        if (usuario == null || !Arrays.equals(usuario.obterSenha(), senha)) {
+            throw new Exception(I18N.obterErroAutenticacao());
+        }
+        else {
+            this.usuario = usuario;
+        }
     }
     
     /**

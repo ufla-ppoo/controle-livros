@@ -31,19 +31,17 @@ public class GerenciadorUsuarios {
     }
 
     /**
-     * Tenta autenticar o usuário passado no sistema. Caso o usuário não possa
-     * ser autenticado lança uma exceção com o erro de autenticação.
+     * Tenta autenticar o usuário passado no sistema.
      * 
      * @param usuario Usuário a ser autenticado
      * @throws Exception Exceção gerada caso o usuário não possa ser autenticado,
      * ou seja, usuário não existe ou senha incorreta.
      */
     public void autenticarUsuario(Usuario usuario) throws Exception {
-        Usuario ret = repositorioUsuario.obterUsuarioPeloLogin(usuario.obterLogin());
-        if (ret == null || !usuario.checarSenha(usuario.obterSenha())) {
-            throw new Exception(I18N.obterErroAutenticacao());
-        }
-        sessaoUsuario.alterarUsuario(ret);
+        Usuario usuarioCadastrado = 
+                repositorioUsuario.obterUsuarioPeloLogin(usuario.obterLogin());
+        
+        sessaoUsuario.alterarUsuario(usuarioCadastrado, usuario.obterSenha());
     }
 
     /**

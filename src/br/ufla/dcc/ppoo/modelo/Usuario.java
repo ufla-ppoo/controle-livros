@@ -37,16 +37,6 @@ public class Usuario {
     public Usuario(String login, char[] senha) {
         this(login, senha, "");
     }
-    
-    /**
-     * Verifica se a senha passada corresponde à senha do usuário.
-     * 
-     * @param senha Senha a ser conferida com a do usuário.
-     * @return True se a senha passada corresponde à do usuário.
-     */
-    public boolean checarSenha(char[] senha) {
-        return (Arrays.equals(this.senha, senha));
-    }
 
     /**
      * Retorna o login do usuário.
