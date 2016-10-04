@@ -165,6 +165,8 @@ public class TelaPrincipal {
             menuInicio.add(menuEntrar);
             menuInicio.add(menuCadastrarUsuario);
         } else {
+            // Aqui você poderá adicionar outros itens de menu, se necessário.
+            
             menuInicio.add(menuMeusLivros);
             menuInicio.add(menuLogout);
         }
