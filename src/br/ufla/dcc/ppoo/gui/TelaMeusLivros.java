@@ -220,7 +220,6 @@ public class TelaMeusLivros {
                 1, 0, 1, 1);
 
         txtTitulo = new JTextField(25);
-        txtTitulo.setEditable(false);
         adicionarComponente(txtTitulo,
                 GridBagConstraints.LINE_START,
                 GridBagConstraints.HORIZONTAL,
@@ -233,7 +232,6 @@ public class TelaMeusLivros {
                 2, 0, 1, 1);
 
         txtAutores = new JTextField(25);
-        txtAutores.setEditable(false);
         adicionarComponente(txtAutores,
                 GridBagConstraints.LINE_START,
                 GridBagConstraints.HORIZONTAL,
@@ -246,7 +244,6 @@ public class TelaMeusLivros {
                 3, 0, 1, 1);
 
         txtAno = new JTextField(8);
-        txtAno.setEditable(false);
         adicionarComponente(txtAno,
                 GridBagConstraints.LINE_START,
                 GridBagConstraints.HORIZONTAL,
@@ -259,7 +256,6 @@ public class TelaMeusLivros {
                 3, 2, 1, 1);
 
         txtNumPaginas = new JTextField(8);
-        txtNumPaginas.setEditable(false);
         adicionarComponente(txtNumPaginas,
                 GridBagConstraints.LINE_START,
                 GridBagConstraints.HORIZONTAL,
@@ -272,7 +268,6 @@ public class TelaMeusLivros {
                 4, 0, 1, 1);
 
         taDescricao = new JTextArea(7, 25);
-        taDescricao.setEditable(false);
         JScrollPane scrollPaneDescricao = new JScrollPane(taDescricao,
                 JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
         adicionarComponente(scrollPaneDescricao,
