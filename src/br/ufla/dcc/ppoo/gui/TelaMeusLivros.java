@@ -32,8 +32,6 @@ public class TelaMeusLivros {
 
     // referência para a tela principal
     private final TelaPrincipal telaPrincipal;
-    // referência para o gerenciador de usuários
-    private final GerenciadorUsuarios gerenciadorUsuarios;
             
     // componentes da tela
     private JDialog janela;
@@ -57,13 +55,11 @@ public class TelaMeusLivros {
     private JTextArea taDescricao;
 
      /**
-     * Constrói a tela Meus Livros guardando a referência da tela principal
-     * e criando o gerenciador de usuários.
+     * Constrói a tela Meus Livros guardando a referência da tela principal.
      * 
      * @param telaPrincipal Referência da tela principal.
      */
     public TelaMeusLivros(TelaPrincipal telaPrincipal) {
-        this.gerenciadorUsuarios = new GerenciadorUsuarios();
         this.telaPrincipal = telaPrincipal;
     }
 
@@ -82,8 +78,8 @@ public class TelaMeusLivros {
      */
     private void construirTabela() {
         Object[] titulosColunas = {
-            I18N.obterColunaTituloLivro(),
-            I18N.obterColunaAutoresLivro()
+            I18N.obterRotuloLivroTitulo(),
+            I18N.obterRotuloLivroAutores()
         };
 
         // Dados "fake"
